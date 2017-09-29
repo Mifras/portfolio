@@ -5,25 +5,24 @@ body, html {
 
 .lander-image {
     /* The image used */
-    background-image: url("../../assets/images/Software.jpg");
-
+    background-image: url("../../assets/images/lander.jpg");
     /* Full height */
     height: 100%;
 
     /* Center and scale the image nicely */
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .project{
-  background-color:#ccc;
-  background-image: url("../../assets/images/Hardware.jpg");
+  background-color: #ccc;
+  padding: 0px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
-
+  overflow: hidden;
 }
 .project:after {
     content: attr(data-content);
@@ -38,10 +37,29 @@ body, html {
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
 }
+.project-pic{
+  height: 100%;
+  width: auto;
+}
 .project:hover:after {
     opacity:1;
 }
 .main-header{
-  background-color: #ccc;
-  height: 300px;
+  background-color: #81abd5;
+  padding: 50px 0px;
+}
+.header-text{
+  text-align: center;
+}
+.header-text hr{
+  border-width: 3px;
+  max-width: 200px;
+  border-color: white;
+  margin-bottom: 50px;
+}
+.text-icon:hover{
+  color: white;
+}
+.text-sub{
+  color: black;
 }
