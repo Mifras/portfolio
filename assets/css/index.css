@@ -4,16 +4,14 @@ body, html {
 }
 
 .lander-image {
-    /* The image used */
-    background-image: url("../../assets/images/lander.jpg");
-    /* Full height */
-    height: 100%;
 
-    /* Center and scale the image nicely */
-    background-position: 0 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    height: 100%;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:0;
 }
 .lander-2{
   background-image: url("../../assets/images/lander2.jpg");
@@ -49,6 +47,8 @@ body, html {
     opacity:1;
 }
 .main-header{
+  position: relative;
+  top: 100vh;
   background-color: #81abd5;
   padding: 50px 0px;
 }
@@ -80,10 +80,6 @@ body, html {
   color: white;
   display: none;
 }
-.lander-text-2{
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 
 
@@ -92,41 +88,34 @@ body, html {
 
 
 
-/* ============================================================
-  PRIMARY STRUCTURE
-============================================================ */
 .parallax-container {
   max-width: 960px;
   margin: 0 auto;
 }
-
-/* ============================================================
-  SECTIONS
-============================================================ */
-section.module:last-child {
+section.par-component:last-child {
   margin-bottom: 0;
 }
-section.module h2 {
+section.par-component h2 {
   margin-bottom: 40px;
   font-family: "Roboto Slab", serif;
   font-size: 30px;
 }
-section.module p {
+section.par-component p {
   margin-bottom: 40px;
   font-size: 16px;
   font-weight: 300;
 }
-section.module p:last-child {
+section.par-component p:last-child {
   margin-bottom: 0;
 }
-section.module.content {
+section.par-component.par-text-content {
   padding: 40px 0;
 }
-section.module.parallax {
+section.par-component.parallax {
   padding: 240px 0;
   background-position: 0 0;
 }
-section.module.parallax h1 {
+section.par-component.parallax h1 {
   color: #1e1e1e;
   font-size: 48px;
   line-height: 1;
@@ -135,32 +124,37 @@ section.module.parallax h1 {
   text-transform: uppercase;
   text-shadow: 0 0 10px white;
 }
-section.module.parallax-1 {
+section.par-bg{
+  /*height: 100%;*/
+  background-size: cover;
+  overflow: hidden;
+}
+section.par-component.parallax-1 {
   background-image: url("../../assets/images/lander.jpg");
 }
-section.module.parallax-2 {
+section.par-component.parallax-2 {
   background-image: url("../../assets/images/lander.jpg");
 }
-section.module.parallax-3 {
+section.par-component.parallax-3 {
   background-image: url("../../assets/images/lander.jpg");
 }
 
 @media all and (min-width: 600px) {
-  section.module h2 {
+  section.par-component h2 {
     font-size: 42px;
   }
-  section.module p {
+  section.par-component p {
     font-size: 20px;
   }
-  section.module.parallax {
+  section.par-component.parallax {
     padding: 300px 0;
   }
-  section.module.parallax h1 {
+  section.par-component.parallax h1 {
     font-size: 96px;
   }
 }
 @media all and (min-width: 960px) {
-  section.module.parallax h1 {
+  section.par-component.parallax h1 {
     font-size: 160px;
   }
 }
