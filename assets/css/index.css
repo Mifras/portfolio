@@ -13,7 +13,7 @@ body, html {
     z-index:0;
 }
 .project{
-  background-color: #ccc;
+  background-color: rgba(0, 112, 255, 0.8);
   padding: 0px;
   background-position: center;
   background-repeat: no-repeat;
