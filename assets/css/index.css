@@ -85,7 +85,7 @@ body, html {
   transform: translateY(-50%);
 }
 
-body:before {
+.lander-image:before {
   content: "";
   display: block;
   position: fixed;
