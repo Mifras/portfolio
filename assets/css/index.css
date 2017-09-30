@@ -4,7 +4,6 @@ body, html {
 }
 
 .lander-image {
-
     height: 100%;
     position:fixed;
     top:0;
@@ -12,10 +11,6 @@ body, html {
     bottom:0;
     left:0;
     z-index:0;
-}
-.lander-2{
-  background-image: url("../../assets/images/lander2.jpg");
-  background-position: bottom;
 }
 .project{
   background-color: #ccc;
@@ -49,7 +44,7 @@ body, html {
 .main-header{
   position: relative;
   top: 100vh;
-  background-color: #81abd5;
+  background-color: rgba(0, 112, 255, 0.8);
   padding: 50px 0px;
 }
 .header-text{
@@ -74,87 +69,13 @@ body, html {
 .lander-text{
   text-align: center;
   position: relative;
-  top: 80%;
-  transform: translateY(-80%);
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 10vw;
   color: white;
   display: none;
 }
-
-
-
-
-
-
-
-
-.parallax-container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-section.par-component:last-child {
-  margin-bottom: 0;
-}
-section.par-component h2 {
-  margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
-  font-size: 30px;
-}
-section.par-component p {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: 300;
-}
-section.par-component p:last-child {
-  margin-bottom: 0;
-}
-section.par-component.par-text-content {
-  padding: 40px 0;
-}
-section.par-component.parallax {
-  padding: 240px 0;
-  background-position: 0 0;
-}
-section.par-component.parallax h1 {
-  color: #1e1e1e;
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px white;
-}
-section.par-bg{
-  /*height: 100%;*/
-  background-size: cover;
-  overflow: hidden;
-}
-section.par-component.parallax-1 {
-  background-image: url("../../assets/images/lander.jpg");
-}
-section.par-component.parallax-2 {
-  background-image: url("../../assets/images/lander.jpg");
-}
-section.par-component.parallax-3 {
-  background-image: url("../../assets/images/lander.jpg");
-}
-
-@media all and (min-width: 600px) {
-  section.par-component h2 {
-    font-size: 42px;
-  }
-  section.par-component p {
-    font-size: 20px;
-  }
-  section.par-component.parallax {
-    padding: 300px 0;
-  }
-  section.par-component.parallax h1 {
-    font-size: 96px;
-  }
-}
-@media all and (min-width: 960px) {
-  section.par-component.parallax h1 {
-    font-size: 160px;
-  }
+.projects-container{
+  position: relative;
+  top: 200vh;
 }
