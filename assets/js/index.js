@@ -1,25 +1,21 @@
 $(document).ready(function(){
   $(".lander-text").fadeIn(1000);
 
+  var carouselText = ["SOFTWARE", "HARDWARE", "RESUME", "BLOG"];
+  var counter = 0;
+  var carouselElement = $('.text-carousel');
+  setTimeout(carouselChangeText, 2000);
 
+////////////////////////////////////////////////////////////////////////////////
+//                                  Functions                                 //
+////////////////////////////////////////////////////////////////////////////////
 
-  (function(){
-
-    var parallax = document.querySelectorAll(".parallax"),
-        speed = 0.5;
-
-    window.onscroll = function(){
-      [].slice.call(parallax).forEach(function(el,i){
-
-        var windowYOffset = window.pageYOffset,
-            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-        el.style.backgroundPosition = elBackgrounPos;
-
-      });
-    };
-
-  })();
-
-
+  // Carousel Function
+  function carouselChangeText() {
+    $(carouselElement).slideUp(1000, function() {
+      this.innerHTML = carouselText[counter];
+      counter = ++counter % carouselText.length;
+      $(this).slideDown(1000, carouselChangeText)
+    })
+  }
 })
