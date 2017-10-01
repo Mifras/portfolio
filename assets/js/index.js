@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".lander-text").fadeIn(1000);
 
-  var carouselText = ["SOFTWARE", "HARDWARE", "RESUME", "BLOG"];
+  var carouselText = ["SOFTWARE", "HARDWARE", "PORTFOLIO", "BLOG"];
   var counter = 0;
   var carouselElement = $('.text-carousel');
   setTimeout(carouselChangeText, 2000);
