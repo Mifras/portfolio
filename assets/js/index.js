@@ -8,6 +8,15 @@ $(document).ready(function(){
   var carouselElement = $('.text-carousel');
   setTimeout(carouselChangeText, 2000);
 
+  $('.fa-angle-double-down').hover(function(){
+    $(this).css('color', 'rgb(0, 112, 255)');
+  }, function(){
+    $(this).css('color', 'white');
+  })
+
+ $('.fa-angle-double-down').click(function(){
+   $('html, body').animate({ scrollTop: $('.main-header').offset().top - 45 }, 'slow');
+ })
   // Carousel Function
   function carouselChangeText() {
     $(carouselElement).slideUp(1000, function() {
