@@ -92,6 +92,22 @@ body, html {
 }
 
 /* Main page content */
+.main-page-content{
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+.progress{
+  background-color: rgba(0,0,0,0);
+}
+.skill{
+  margin-top: 10px;
+  text-align: left;
+}
+.skill-bar{
+
+}
 
 /* Projects */
 .project{
