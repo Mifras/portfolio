@@ -93,20 +93,27 @@ body, html {
 
 /* Main page content */
 .main-page-content{
-  margin: 20px;
   text-align: center;
   position: relative;
   color: white;
+  margin: 1.5em 0px;
 }
 .progress{
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(50,50,50,0.7);
 }
 .skill{
   margin-top: 10px;
   text-align: left;
 }
-.skill-bar{
-
+.info-box{
+  padding: 2.5em;
+}
+.standard-image{
+  width: 70%;
+  margin: 0.5em;
+}
+.education-text{
+  font-size: 1.7em;
 }
 
 /* Projects */
@@ -141,5 +148,4 @@ body, html {
 }
 .projects-container{
   position: relative;
-  top: 100vh;
 }
