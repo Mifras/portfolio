@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  $(".lander-text").fadeIn(1000);
 
   // Main text-carousel
   var vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -8,15 +7,19 @@ $(document).ready(function(){
   var carouselElement = $('.text-carousel');
   setTimeout(carouselChangeText, 2000);
 
-  $('.fa-angle-double-down').hover(function(){
+  $('.down-icon').hover(function(){
     $(this).css('color', 'rgb(0, 112, 255)');
   }, function(){
     $(this).css('color', 'white');
   })
 
- $('.fa-angle-double-down').click(function(){
-   $('html, body').animate({ scrollTop: $('.main-header').offset().top - 45 }, 'slow');
- })
+  $('.downjs-1').click(function(){
+    $('html, body').animate({ scrollTop: $('.main-header').offset().top - 45 }, 'slow');
+  })
+
+  $(".down-icon").hover(function () {
+    $(this).find('.down-arrow-text').animate({width:'toggle'},350);
+  });
   // Carousel Function
   function carouselChangeText() {
     $(carouselElement).slideUp(1000, function() {

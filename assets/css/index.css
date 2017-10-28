@@ -2,6 +2,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    text-align: center;
 }
 /* Navbar */
 
@@ -19,14 +20,14 @@ body, html {
     z-index:0;
 }
 .lander-text{
-  text-align: center;
+  width: 90%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   font-size: 10vw;
   color: white;
   height: 2em;
-  display: none;
+  display: inline-block;
 }
 .title-break{
   border-width: 3px;
@@ -56,20 +57,29 @@ body, html {
   display: none;
 }
 .down-icon{
-    font-size: 4vw;
-    height: 1em;
-    top: -10vh;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 4em;
+  height: 1em;
+  top: -5vh;
 }
 .fa-angle-double-down{
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
+  vertical-align: middle;
+}
+.down-arrow-text{
+  display: none;
+  font-size: 0.5em;
+  vertical-align: middle;
 }
 
 /* Header */
 .main-header{
+  height: 36vh;
   position: relative;
   background-color: rgba(0, 112, 255, 0.8);
-  padding: 50px 0px;
+  padding: 20px 0px;
 }
 .header-text{
   text-align: center;
@@ -81,7 +91,7 @@ body, html {
   font-size: 1.2em;
 }
 .text-center{
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .qualities{
   transition: all 0.3s;
@@ -90,9 +100,13 @@ body, html {
 .qualities:hover{
   color: white;
 }
+.title{
+  color: white;
+}
 
 /* Main page content */
 .main-page-content{
+  height: 55vh;
   text-align: center;
   position: relative;
   color: white;
@@ -114,6 +128,13 @@ body, html {
 }
 .education-text{
   font-size: 1.7em;
+  vertical-align: middle;
+}
+.very-small-image{
+  width: 2em;
+}
+.info-break{
+  margin: 20px auto;
 }
 
 /* Projects */
@@ -148,4 +169,33 @@ body, html {
 }
 .projects-container{
   position: relative;
+}
+
+@media screen and (max-width: 991px){
+  .down-icon{
+    font-size: 3em;
+  }
+  .downjs-1{
+    top: -10vh;
+  }
+  .main-header{
+    height: auto;
+  }
+  .main-page-content{
+    height: auto;
+  }
+}
+@media screen and (max-height: 738px){
+  .down-icon{
+    font-size: 3em;
+  }
+  .downjs-1{
+    top: -10vh;
+  }
+  .main-header{
+    height: auto;
+  }
+  .main-page-content{
+    height: auto;
+  }
 }
