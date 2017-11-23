@@ -13,12 +13,22 @@ $(document).ready(function(){
     $(this).css('color', 'white');
   })
 
+  $('.navbar-nav').hide();
+  $('.navbar').hover(function(){
+    $('.navbar-nav').fadeIn();
+  }, function(){
+    $('.navbar-nav').fadeOut();
+  });
+
   $('.downjs-1').click(function(){
-    $('html, body').animate({ scrollTop: $('.main-header').offset().top - 45 }, 'slow');
+    $('html, body').animate({ scrollTop: $('.main-header').offset().top }, 'slow');
+  })
+  $('.downjs-2').click(function(){
+    $('html, body').animate({ scrollTop: $('.projects-container').offset().top }, 'slow');
   })
 
   $(".down-icon").hover(function () {
-    $(this).find('.down-arrow-text').animate({width:'toggle'},350);
+    $(this).find('.down-arrow-text').stop().animate({width:'toggle'},350);
   });
   // Carousel Function
   function carouselChangeText() {
@@ -26,7 +36,7 @@ $(document).ready(function(){
       vowels.includes(carouselText[counter].charAt(0).toLowerCase()) ? $('.sub-2-1').fadeIn() : $('.sub-2-1').fadeOut();
       this.innerHTML = carouselText[counter];
       counter = ++counter % carouselText.length;
-      $(this).slideDown(1000, carouselChangeText)
+      $(this).slideDown(1000, carouselChangeText);
     })
   }
 })
