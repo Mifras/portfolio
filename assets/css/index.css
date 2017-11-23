@@ -5,6 +5,9 @@ body, html {
     text-align: center;
 }
 /* Navbar */
+.navbar{
+  background: rgba(0, 112, 255, 0.5);
+}
 .nav-bg{
   background: rgba(0, 112, 255, 0);
   -webkit-transition:background 1s;
@@ -12,7 +15,9 @@ body, html {
   -o-transition:background 1s;
   transition:background 1s
 }
-  .nav-bg:hover {background:rgba(0, 112, 255, 1)}
+.nav-bg:hover {
+  background:rgba(0, 112, 255, 1);
+}
 
 /* Lander */
 .lander-container{
@@ -188,7 +193,10 @@ body, html {
 }
 
 @media screen and (max-width: 991px){
-  .down-icon{
+  .downjs-1{
+    font-size: 3em;
+  }
+  .downjs-2{
     display: none;
   }
   .main-header{
@@ -199,7 +207,10 @@ body, html {
   }
 }
 @media screen and (max-height: 738px){
-  .down-icon{
+  .downjs-1{
+    font-size: 3em;
+  }
+  .downjs-2{
     display: none;
   }
   .main-header{

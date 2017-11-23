@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
   // Main text-carousel
   var vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -7,29 +7,50 @@ $(document).ready(function(){
   var carouselElement = $('.text-carousel');
   setTimeout(carouselChangeText, 2000);
 
-  $('.down-icon').hover(function(){
+  $('.down-icon').hover(function() {
     $(this).css('color', 'rgb(0, 112, 255)');
   }, function(){
     $(this).css('color', 'white');
   })
 
-  $('.navbar-nav').hide();
-  $('.navbar').hover(function(){
-    $('.navbar-nav').fadeIn();
-  }, function(){
-    $('.navbar-nav').fadeOut();
-  });
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('.nav-bg').removeClass('nav-bg');
 
-  $('.downjs-1').click(function(){
+
+    $(window).scroll(
+        {
+          oldTop: 0
+        },
+        function () {
+        var newTop = $(window).scrollTop();
+        if (newTop < this.oldTop) {
+          $(".navbar").fadeIn();
+        } else {
+          $(".navbar").fadeOut();
+        }
+        this.oldTop = newTop;
+    });
+
+  } else {
+    $('.navbar-nav').hide();
+    $('.navbar').hover(function() {
+      $('.navbar-nav').stop().fadeIn();
+    }, function(){
+      $('.navbar-nav').stop().fadeOut();
+    });
+  }
+
+  $('.downjs-1').click(function() {
     $('html, body').animate({ scrollTop: $('.main-header').offset().top }, 'slow');
   })
-  $('.downjs-2').click(function(){
+  $('.downjs-2').click(function() {
     $('html, body').animate({ scrollTop: $('.projects-container').offset().top }, 'slow');
   })
 
   $(".down-icon").hover(function () {
     $(this).find('.down-arrow-text').stop().animate({width:'toggle'},350);
   });
+
   // Carousel Function
   function carouselChangeText() {
     $(carouselElement).slideUp(1000, function() {
