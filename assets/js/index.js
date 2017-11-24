@@ -24,9 +24,9 @@ $(document).ready(function() {
         function () {
         var newTop = $(window).scrollTop();
         if (newTop < this.oldTop) {
-          $(".navbar").fadeIn();
+          $(".navbar").stop().fadeTo(500, 1);
         } else {
-          $(".navbar").fadeOut();
+          $(".navbar").stop().fadeTo(500, 0);
         }
         this.oldTop = newTop;
     });
