@@ -24,11 +24,10 @@ $(document).ready(function() {
         function () {
         var newTop = $(window).scrollTop();
         if (newTop < this.oldTop) {
-          $(".navbar").stop().fadeTo(500, 1);
+          $(".navbar").fadeIn(500, () => this.oldTop = newTop);
         } else {
-          $(".navbar").stop().fadeTo(500, 0);
+          $(".navbar").fadeOut(500, () => this.oldTop = newTop);
         }
-        this.oldTop = newTop;
     });
 
   } else {
