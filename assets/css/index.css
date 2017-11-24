@@ -20,6 +20,10 @@ body, html {
 }
 
 /* Lander */
+.lander-mobile{
+  height: 120vh !important;
+  top: auto !important;
+}
 .lander-container{
   height: 100vh;
 }
