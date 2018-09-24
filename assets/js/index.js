@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Main text-carousel
   var vowels = ['a', 'e', 'i', 'o', 'u'];
-  var carouselText = ["SOFTWARE", "HARDWARE", "ADVANCED", "PORTFOLIO", "EXPLORATIVE", "BLOG"];
+  var carouselText = ["SOFTWARE", "HARDWARE", "ADVANCED", "PORTFOLIO", "EXPLORATIVE"];
   var counter = 0;
   var carouselElement = $('.text-carousel');
   setTimeout(carouselChangeText, 2000);
@@ -18,9 +18,7 @@ $(document).ready(function() {
     $('.lander-image').addClass('lander-mobile');
 
     $(window).scroll(
-        {
-          oldTop: 0
-        },
+        {oldTop: 0},
         function () {
         var newTop = $(window).scrollTop();
         if (newTop < this.oldTop) {
@@ -40,9 +38,6 @@ $(document).ready(function() {
   }
 
   $('.downjs-1').click(function() {
-    $('html, body').animate({ scrollTop: $('.main-header').offset().top }, 'slow');
-  })
-  $('.downjs-2').click(function() {
     $('html, body').animate({ scrollTop: $('.projects-container').offset().top }, 'slow');
   })
 
